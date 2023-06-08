@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Review Filter</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h1 class="text-center mt-5">Review Filter</h1>
+        <form action="filter_reviews.php" method="POST" class="mt-4 shadow p-4 rounded">
+          <div class="mb-3">
+            <label for="rating_order" class="form-label">Rating Order:</label>
+            <select name="rating_order" id="rating_order" class="form-control">
+              <option value="">No Filtering</option>
+              <option value="lowest_first">Lowest First</option>
+              <option value="highest_first">Highest First</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="minimum_rating" class="form-label">Minimum Rating:</label>
+            <input type="number" name="minimum_rating" id="minimum_rating" min="1" max="5" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="date_order" class="form-label">Order by Date:</label>
+            <select name="date_order" id="date_order" class="form-control">
+              <option value="">No Filtering</option>
+              <option value="newest_first">Newest First</option>
+              <option value="oldest_first">Oldest First</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="prioritize_text" class="form-label">Prioritize by Text:</label>
+            <select name="prioritize_text" id="prioritize_text" class="form-control">
+              <option value="">No Filtering</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="text-center">
+            <input type="submit" value="Filter" class="btn btn-info text-white custom-btn">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
